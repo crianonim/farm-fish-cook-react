@@ -43,6 +43,6 @@ export default ({ number, time = 1000, fps = 60, shake = false, changeColor = fa
 
     return (<span>
         <span style={style}>{displayedNumber}</span>
-        {showDelta && animating && (delta !== 0) ? <span style={{ ...style, position: 'absolute', transform: `translate(-50%,-${100 * percent}%)` }}>{delta}</span> : null}
+        {showDelta && animating && (delta !== 0) ? <span style={{ ...style,fontSize:"0.8em",opacity:1-percent, position: 'absolute', transform: `translate(-50%,-${100 * percent}%)` }}>{(delta>0?"+":"")+delta}</span> : null}
     </span>)
 }
